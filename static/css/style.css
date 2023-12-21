@@ -31,7 +31,6 @@ h2 {
 h3 {
     font-size: 2rem;
     font-weight: 500;
-    /* letter-spacing: 0.5px; */
 }
 
 p {
@@ -45,11 +44,9 @@ button, a {
 }
 
 .primary button{
-    background-color: rgb(93, 62, 0);
-    background-color: white;
-    color: black;
-    border: 1px solid rgb(45, 30, 0);
-    box-shadow: 0 1px rgb(42, 28, 0);
+    background-color: #4C57F5;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 2px rgb(27, 27, 27);
     border-radius: 15px;
     padding: 0.68em;
     margin-top: 1%;
@@ -59,16 +56,42 @@ button, a {
     z-index: 30;
 }
 
+.primary button:hover,  .primary.blue button:hover    {
+    background-color: #242a78;
+}
 
-.primary-button button:hover {
-    background-color: rgb(52, 34, 0);
+.primary button:active {
+    padding-top: 0.5em  ;
 }
 
 .primary button a {
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.cta .primary {
+    padding: 2em 0 0 0;
+} 
+
+.cta .primary button {
+    background-color: white;
+    border-color: #000000;
+    
+}
+
+.cta .primary button a {
     color: black;
+}
+
+.cta .primary button:hover,  .cta .primary button a:hover   {
+   background-color: rgb(35, 42, 138);
+   color: #FFFFFF !important    ;
+}
+
+.cta .primary button:active {
+    padding-top:0.5em;
 }
 
 
@@ -108,22 +131,29 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
     width: 100%;
-    background-color: rgb(53, 35, 0);
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #000000;
 }
 
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.open {
+    height: fit-content;
+}
+
 nav a {
-    color: white;
-    color: black;
+    color: rgb(33, 33, 33);
     text-decoration: none;
     list-style: none;
     font-size: 1.1em;
 }
 
-
+.nav-item a:hover {
+    color: #4C57F5;
+}
 
 nav .primary button {
     flex: 10;
@@ -135,31 +165,48 @@ nav .primary button a{
     font-size: 1em;
 }
 
+
+.blue button {
+    background-color: #4C57F5 !important;
+}
+
+.blue button:hover    {
+    background-color: #242a78 !important;
+}
+
+.blue button:active    {
+    padding: 0.5em;
+}
+
+.blue button a {
+    color: #FFFFFF !important;
+}
+
+
 .logo {
     margin: 0 0 0 1em;
-    color: white;
-    /* background-color: gray; */
-    /* background-color: blue; */
-    /* text-align: center; */
+    color: #4C57F5;
     font-size: 1.5rem;
     font-family: "Montserrat";
-    font-weight: 400;
+    font-weight: 900;
+}
+
+.logo a {
+    color: #4C57F5;
+    color: #333333;
 }
 
 .nav-links {
-    /* width: 90%; */
     flex: 1;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 0 0 2em;
-    /* background-color: pink; */
 }
 
 .left li{
     display: inline-block;
     padding: 1em;
-   /* background-color: #8d6216; */
 }
 
 
@@ -167,14 +214,16 @@ nav .primary button a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* background-color: red; */
     margin-right: 1em;
 }
 
 nav .toggle-btn {
-    display: flex;
+    cursor: pointer;
+    display: none;
+    margin-right: 1em;
     align-items: center;
     font-size: 1.5rem;
+
 }
 
 
@@ -241,9 +290,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #000000;
+    background-color: #FFFFFF;
     border-bottom: 0.1px solid rgba(255, 255, 255, 0.133);
-    color: #FFFFFF;
+    
 }
 
 .service-container {
@@ -252,20 +301,21 @@ main {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #33302B;
-    background-color: transparent;
+    background-color: ;
     color: #ffffff;
 }
 
 .service-text {
     text-align: center;
     margin-bottom: 1.5em;
+    color: #000000;
 }
 
 .section .service-intro  {
     margin-top: 2em;
     font-size: 1.5rem;
 }
+
 .service-card-container {
     width: 72%;
     display: flex;
@@ -285,19 +335,19 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(53, 35, 0);
-    background-color: #FFFFFF;
-    color:#000000;
+    background-color: #4C57F5;
+    color:#FFFFFF;
     border-radius: 20px;
     text-align: center;
 }
 
 .service-card-img {
+    color: white;
+    outline: white;
     width: 25%;
     height: auto;
     margin-bottom: 15%;
-    /* filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(81deg) brightness(109%) contrast(101%) drop-shadow(0 -1.6px #815601);
-    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(81deg) brightness(109%) contrast(101%) drop-shadow(0 -1.6px #000000); */
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(81deg) brightness(109%) contrast(101%) drop-shadow(0 0px #ffffff); 
 }
 
 .service-card h3 {
@@ -315,12 +365,9 @@ main {
 .service-card button {
     padding: 7px;
     margin-top: 1em;
-    background-color: rgb(53, 35, 0);
     background-color: #FFFFFF;
-    border: 1px solid white;
     border: 1px solid black;
     border-radius: 5px;
-    filter: drop-shadow(0 1px #815601);
     filter: drop-shadow(0 1px #000000);
     font-weight: bold;
     font-size: 0.9rem;
@@ -335,12 +382,10 @@ main {
 
 /* Credibility */
 .credibility {
-    padding: 3em 0 3em 0;
+    
     grid-area: credibility;
     width: 100%;
-    height: 100%;
-    background-color: #967B44;    
-    background-color: #000000;
+    height: 100%;  
     color: white;
 }
 
@@ -353,24 +398,24 @@ main {
     align-items: center;
 }
 
-.credibity1-container {
-    padding: 0 0 2.5% 0;
+.credibity-section1-container {
+    padding: 3em 0 2em 0;
     width: 100%;
     height: fit-content;
-    background-color: transparent;
-    border-bottom: 0.1px solid rgba(255, 255, 255, 0.133);
+    background-color: #4C57F5;
+    /* border-bottom: 0.1px solid rgba(255, 255, 255, 0.133); */
     text-align: center;
 }
 
-.credibility1-header {
+.credibity-section1-header {
     margin-bottom: 3%;
 }
 
-.credibility1-header h2 {
+.credibity-section1-header h2 {
     color: #FFFFFF;
     font-weight: 200;
     text-transform: uppercase;
-    /* text-decoration: underline; */
+    text-decoration: underline #ffffff;
     margin-bottom: 3%;
 }
 
@@ -378,23 +423,32 @@ main {
     width: 35%;
     height: auto;
     border-radius: 10px;
-    outline: 2px solid #000000;
+    outline: 2px solid #ffffff;
 }
 
-.credibility2-container {
-    padding: 3em 0 0 0;
-    width: 90%;
-    height: fit-content;
-    background-color: #000000;
-    color: #FFFFFF;
+.credibity-section2-container {
+    padding: 3em 0 3em 0;
+    width: 100%;
+    background-color: #232433;
+    background-color: #4C57F5;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} 
+
+.credibility2-card-container {
+    padding: 3em 0 0 0;
+    width: 90%;
+    height: fit-content;
+    color: #FFFFFF;
+    
 }
 
 .credibility2-header {
     padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
 }
 
 .credibility2-header h3 {
@@ -410,13 +464,12 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: start;
-    /* background-color: green; */
 }
 
 .testimonial {
     width: 19%;
     min-width: 200px;
-    height: 340px;
+    height: 400px;
     padding: 1em;
     margin: 1em;
     display: inline-flex;
@@ -425,7 +478,7 @@ main {
     align-items: flex-start;
     background-color: rgb(255, 255, 255);
     color: #000000;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     text-align: left;
 }
@@ -436,32 +489,11 @@ main {
 }
 
 .testimonial p {
-    /* margin: 1em; */
     letter-spacing: 1px;
-    /* font-size: 1.3rem; */
     width: 12em;
 }
 
-.cta button {
-    background-color: rgb(93, 62, 0);
-    background-color: white;
-    color: black;
-    border: 1px solid rgb(45, 30, 0);
-    box-shadow: 0 1px rgb(42, 28, 0);
-    border-radius: 12px;
-    padding: 0.8em;
-    margin-top: 3em;
-    font-weight: bold;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-
-.cta button a {
-    color: black;
-    text-decoration: none;
-}
-
-/* Gallary Section */
+/* Gallary Section */   
 .gallery-container {
     padding: 3em 0 3em 0;
     width: 100%;
@@ -469,7 +501,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #ffffff;
     color: #FFFFFF;
     border-top: 0.1px solid rgba(255, 255, 255, 0.133);
 }
@@ -482,22 +514,22 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* background-color: #33302B; */
+}
+.gallery-container .header h2{
+    color: #000000;
 }
 
 .gallery-card {
     width: 20%;
-    
     min-width: 300px;
-    /* height: fit-content; */
     margin: 1em;
-    /* background-color: #FFFFFF; */
     border-radius: 12px;
 }
 
 .gallery-card img {
     width: 100%;
     height: auto;
+    border: 2px solid #000000;
     border-radius: 12px;
     
 }
@@ -510,15 +542,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #4C57F5;
+    background-color: #52525C;
     color: white;
     border-top: 0.1px solid rgba(255, 255, 255, 0.133);
 }
 
 .contact-header{
     font-size: 3.5rem;
-    /* width: 100%; */
-    /* background-color: aquamarine; */
 }
 
 .full-contact-container {
@@ -529,17 +560,14 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* background-color: #44966a; */
 }
 
 .contact-info-container {
     width: 49%;
-    /* height: 500px; */
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: purple; */
 }
 
 .contact-info-container p{
@@ -559,7 +587,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: lightpink; */
     border-radius: 12px;
 }
 
@@ -580,7 +607,8 @@ main {
 .calendar-container {
     padding: 3em 0 3em 0;
     width: 100%;
-    background-color: #000000;
+    background-color: #ffffff;
+    background-color: #4C57F5;
     border-top: 0.1px solid rgba(255, 255, 255, 0.133);
 }
 .calendar {
@@ -588,9 +616,7 @@ main {
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    background-color: #ffffff;
-    background-color: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -602,7 +628,8 @@ main {
 }
 
 .calendly-inline-widget {
-    background-color: black;
+    color: #4C57F5;
+    border-radius: 18px;
     width: 90%;
 }
 
@@ -616,6 +643,11 @@ footer {
     grid-area: footer;
     width: 100%;
     height: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-left: 1em;
 }
 
 footer h3 {
@@ -633,8 +665,8 @@ footer h3 {
     .service-card-container {
         width: 90%;
          min-width: 400px; 
-         /* background-color: #815601; */
     }
+
     .service-card {
         height: auto;
         width: 17%;
@@ -643,51 +675,94 @@ footer h3 {
     }
 
     /*Credibility*/
-    .credibility1-header h2 {
+    .credibity-section1-header h2 {
         /* font-size: 2.5rem; */
     }
     .credibility-img-container img {
-        /* width: 60%; */
         min-width: 500px;
         height: auto;
+    }
+
+    .credibility2-cards, .testimonial {
+        height: fit-content;
     }
 } 
 
 @media only screen and (max-width: 1058px) {
     nav {
-        flex-direction: column;
+        position: fixed;
+        z-index: 5;
+    }
+
+    .nav-links .left, .right {
+        display: none;
+    }
+
+    nav .toggle-btn {
+        display: block;
+        color: #000000;
+    }
+
+    .dropdown-menu {
+        position: fixed;
+        top: 31px;
+        display: block;
+        width: 100%;
+        height: 0;
+        background: white;
+        z-index: 10;
+        overflow: hidden;
+        transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .dropdown-menu ul {
         padding: 1em 0 1em 0;
+    }
+
+    .dropdown-menu li {
+        display: flex;
+        justify-content: center;
+        padding: 1em 0 1em 0;
+    }
+    
+    .dropdown-menu a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .primary2 {
+        display: flex;
+        justify-content: center;       
+    }
+
+    .primary2 button    {  
+        color: black;
+        border: 1px solid rgb(45, 30, 0);
+        box-shadow: 0 1px rgb(42, 28, 0);   
+        border-radius: 15px;
+        font-weight: 900;
+        text-transform: capitalize;
+        cursor: pointer;    
+    }
+    .primary2 button {
+        padding:1em;    
+    }
+    .primary2 button a {
         font-size: 1em;
     }
 
-    .nav-links {
-        display: inline-flex;
-        flex: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        text-align: center;
-        /* background-color: aqua; */
+    .hero-section.move{
+        position: relative;
+        top: 380px;
     }
-    .left {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0;
+    main.move {
+        position: relative;
+        top: 380px;
     }
-    .right {
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+    footer.move {
+        position: relative;
+        top: 380px;
     }
-    .nav-links li {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 0;
-    }
-
 }
 
 @media only screen and (max-width:769px) {
@@ -715,7 +790,6 @@ footer h3 {
         /* padding: 6% 0 6% 0; */
     }
     .service-text h2{
-        /* margin-top: 3%; */
         font-size: 2.5rem;
     }
  
@@ -731,13 +805,18 @@ footer h3 {
     }
 
     /* Credibility */
-    .credibility1-header h2 {
+    .credibity-section1-header h2 {
         font-size: 2.5rem;
     }
     .credibility-img-container img {
         width: 60%;
         min-width: 300px;
         height: auto;
+    }
+
+    /* Calendar */
+    .calendar p{
+        margin-bottom: 1em;
     }
 }
 
@@ -766,13 +845,11 @@ footer h3 {
         /* padding: 6% 0 6% 0; */
     }
     .service-text h2{
-        /* margin-top: 3%; */
         font-size: 2rem;
     }
 
     .service-text {
         width: 100%;
-        /* background-color: gray; */
     }
 
     .service-card-container {
@@ -786,16 +863,13 @@ footer h3 {
         min-width: auto;
     }
     /*Credibility*/
-    .credibility1-header h2 {
+    .credibity-section1-header h2 {
         font-size: 2.5rem;
     }
     .credibility-img-container img {
-        /* width: 60%; */
-        /* min-width: 500px; */
         height: auto;
     }
     .contact-info-container p{
         font-size: 1.15rem;
     }
 }
-
